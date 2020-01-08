@@ -13,7 +13,7 @@ void main() {
 * TODO:
 *  - saving Data //Shared Preferences - BLOC Pattern
 *  - code structure // using Flutter Provider
-*  - build methods on top of the Widget
+*  - init methods on top of the Widget
 *  - instead of using Widget build methods, creating new Stateless Widgets
 *
 * */

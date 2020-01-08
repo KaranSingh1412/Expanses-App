@@ -1,8 +1,6 @@
 import 'dart:io';
 
 import 'package:expanse_app/models/transaction.dart';
-import 'package:expanse_app/providers/transaction_bloc.dart';
-import 'package:provider/provider.dart';
 import 'package:expanse_app/widgets/transaction_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -106,7 +104,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final TransactionBloc transactionBloc = Provider.of<TransactionBloc>(context);
     final mediaQuery = MediaQuery.of(context);
     final isLandscape = mediaQuery.orientation == Orientation.landscape;
     final PreferredSizeWidget appBar = Platform.isIOS ? CupertinoNavigationBar(
