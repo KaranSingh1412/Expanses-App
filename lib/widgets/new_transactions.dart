@@ -40,7 +40,7 @@ class _NewTransactionState extends State<NewTransaction> {
     showDatePicker(
       context: context,
       initialDate: DateTime.now(),
-      firstDate: DateTime(2019),
+      firstDate: DateTime(2020),
       lastDate: DateTime.now(),
     ).then((pickedDate) {
       if(pickedDate == null) {

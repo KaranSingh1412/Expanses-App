@@ -10,16 +10,15 @@ void main() {
 
 /*
 *
-* TODO:
-*  - saving Data //Shared Preferences - BLOC Pattern
-*  - code structure // using Flutter Provider
+* Todo:
+*  - saving Data //Shared Preferences
+*  - code structure // using Flutter Provider - BLOC Pattern
 *  - init methods on top of the Widget
 *  - instead of using Widget build methods, creating new Stateless Widgets
 *
 * */
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,21 +26,19 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: ThemeData.light().textTheme.copyWith(
-          button: TextStyle(
-              color: Colors.white
-          ),
-        ),
+              button: TextStyle(color: Colors.white),
+            ),
         primarySwatch: Colors.purple,
         accentColor: Colors.amber,
         fontFamily: 'QuickSand',
         appBarTheme: AppBarTheme(
           textTheme: ThemeData.light().textTheme.copyWith(
-            title: TextStyle(
-              fontFamily: 'OpenSans',
-              fontSize: 20,
-            ),
-          ),
-        )
+                headline6: TextStyle(
+                  fontFamily: 'OpenSans',
+                  fontSize: 20,
+                ),
+              ),
+        ),
       ),
       home: Scaffold(
         body: HomePage(),
