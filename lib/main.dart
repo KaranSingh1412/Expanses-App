@@ -25,20 +25,20 @@ class MyApp extends StatelessWidget {
       title: 'Personal Expenses',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        /*textTheme: ThemeData.light().textTheme.copyWith(
+        textTheme: ThemeData.light().textTheme.copyWith(
               button: TextStyle(color: Colors.white),
-            ),*/
+            ),
         primarySwatch: Colors.purple,
         accentColor: Colors.amber,
         fontFamily: 'QuickSand',
-        /*appBarTheme: AppBarTheme(
+        appBarTheme: AppBarTheme(
           textTheme: ThemeData.light().textTheme.copyWith(
                 headline6: TextStyle(
                   fontFamily: 'OpenSans',
                   fontSize: 20,
                 ),
               ),
-        ),*/
+        ),
       ),
       home: Scaffold(
         body: HomePage(),
