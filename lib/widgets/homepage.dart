@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Switch.adaptive(
             value: _showChart,
-            activeColor: Theme.of(context).accentColor,
+            activeColor: Theme.of(context).secondaryHeaderColor,
             onChanged: (val) {
               setState(() {
                 _showChart = val;

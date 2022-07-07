@@ -29,15 +29,12 @@ class MyApp extends StatelessWidget {
               button: TextStyle(color: Colors.white),
             ),
         primarySwatch: Colors.purple,
-        accentColor: Colors.amber,
         fontFamily: 'QuickSand',
         appBarTheme: AppBarTheme(
-          textTheme: ThemeData.light().textTheme.copyWith(
-                headline6: TextStyle(
-                  fontFamily: 'OpenSans',
-                  fontSize: 20,
-                ),
-              ),
+          toolbarTextStyle: TextStyle(
+            fontFamily: 'OpenSans',
+            fontSize: 20,
+          ),
         ),
       ),
       home: Scaffold(
