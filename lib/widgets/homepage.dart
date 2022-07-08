@@ -118,7 +118,8 @@ class _HomePageState extends State<HomePage> {
 
     final isLandscape = mediaQuery.orientation == Orientation.landscape;
 
-    final PreferredSizeWidget appBar = Platform.isIOS
+    final PreferredSizeWidget
+        appBar = /*Platform.isIOS
         ? CupertinoNavigationBar(
             backgroundColor: Theme.of(context).primaryColor,
             middle: Text('Personal Expenses'),
@@ -158,39 +159,39 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           )
-        : AppBar(
-            title: Text('Personal Expenses'),
-            actions: <Widget>[
-              Container(
-                width: 50,
-                child: DropdownButton(
-                  value: dropdownValue,
-                  icon: Icon(Icons.arrow_drop_down),
-                  elevation: 5,
-                  items: <String>['\$', '€', '₤']
-                      .map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Text(
-                        value,
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                    );
-                  }).toList(),
-                  onChanged: (String newValue) {
-                    setState(() {
-                      dropdownValue = newValue;
-                    });
-                  },
+        :*/
+        AppBar(
+      title: Text('Personal Expenses'),
+      actions: <Widget>[
+        Container(
+          width: 50,
+          child: DropdownButton(
+            value: dropdownValue,
+            icon: Icon(Icons.arrow_drop_down),
+            elevation: 5,
+            items: <String>['\$', '€', '₤']
+                .map<DropdownMenuItem<String>>((String value) {
+              return DropdownMenuItem<String>(
+                value: value,
+                child: Text(
+                  value,
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 ),
-              ),
-              IconButton(
-                icon: Icon(Icons.add),
-                onPressed: () => _showTransactionAddMenu(context),
-              ),
-            ],
-          );
+              );
+            }).toList(),
+            onChanged: (String newValue) {
+              setState(() {
+                dropdownValue = newValue;
+              });
+            },
+          ),
+        ),
+        IconButton(
+          icon: Icon(Icons.add),
+          onPressed: () => _showTransactionAddMenu(context),
+        ),
+      ],
+    );
 
     final tListWidget = Container(
       height: (mediaQuery.size.height - appBar.preferredSize.height) * 0.7,
@@ -215,22 +216,23 @@ class _HomePageState extends State<HomePage> {
       ),
     );
 
-    return Platform.isIOS
+    return /*Platform.isIOS
         ? CupertinoPageScaffold(
             child: pageBody,
             navigationBar: appBar,
           )
-        : Scaffold(
-            floatingActionButton: Platform.isIOS
-                ? Container()
-                : FloatingActionButton(
-                    child: Icon(Icons.add),
-                    onPressed: () => _showTransactionAddMenu(context),
-                  ),
-            floatingActionButtonLocation:
-                FloatingActionButtonLocation.centerFloat,
-            appBar: appBar,
-            body: pageBody,
-          );
+        : */
+        Scaffold(
+      floatingActionButton: /*Platform.isIOS
+          ? Container()
+          : */
+          FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () => _showTransactionAddMenu(context),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      appBar: appBar,
+      body: pageBody,
+    );
   }
 }

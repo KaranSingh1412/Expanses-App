@@ -9,16 +9,19 @@ class AdaptiveTextField extends StatelessWidget {
   final String label;
   final TextInputType inputType;
 
-  const AdaptiveTextField({Key key, this.controller, this.dataHandler, this.label, this.inputType}) : super(key: key);
+  const AdaptiveTextField(
+      {Key key, this.controller, this.dataHandler, this.label, this.inputType})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Platform.isIOS ? CupertinoTextField(
+    return /*Platform.isIOS ? CupertinoTextField(
       keyboardType: inputType,
       controller: controller,
       onSubmitted: dataHandler,
       placeholder: label,
-    ) : TextField(
+    ) : */
+        TextField(
       keyboardType: inputType,
       controller: controller,
       onSubmitted: dataHandler,
